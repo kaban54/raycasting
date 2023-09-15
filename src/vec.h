@@ -44,5 +44,7 @@ double operator, (const Vec& vec1, const Vec& vec2);
 
 Vec operator^ (const Vec& vec1, const Vec& vec2);
 
+Vec operator* (const Vec& vec1, const Vec& vec2);
+
 
 #endif
