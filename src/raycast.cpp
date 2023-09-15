@@ -1,5 +1,6 @@
 #include "vec.h"
 #include "coordsys.h"
+#include "shapes.h"
 #include <SFML/Graphics.hpp>
 
 const int W = 1200;

@@ -47,4 +47,14 @@ Vec operator^ (const Vec& vec1, const Vec& vec2);
 Vec operator* (const Vec& vec1, const Vec& vec2);
 
 
+class Ray {
+    public:
+    Vec start;
+    Vec dir;
+
+    explicit Ray (const Vec& start_, const Vec& dir_);
+};
+
+double Distance (Ray ray, Vec point);
+
 #endif

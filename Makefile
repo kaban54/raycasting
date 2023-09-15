@@ -6,8 +6,8 @@ SRCDIR = src/
 
 all: raycast
 
-raycast: obj/raycast.o obj/vec.o obj/coordsys.o obj/ray.o
-	$(CC) -o raycast obj/raycast.o obj/vec.o obj/coordsys.o obj/ray.o $(SFMLFLAGS)
+raycast: obj/raycast.o obj/vec.o obj/coordsys.o obj/shapes.o
+	$(CC) -o raycast obj/raycast.o obj/vec.o obj/coordsys.o obj/shapes.o $(SFMLFLAGS)
 
 $(OBJDIR)%.o: $(SRCDIR)%.cpp
 	$(CC) -c $(CFLAGS) $< -o $@

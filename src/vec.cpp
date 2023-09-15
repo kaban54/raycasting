@@ -91,3 +91,13 @@ Vec operator* (const Vec& vec1, const Vec& vec2) {
                 vec1.z * vec2.x - vec1.x * vec2.z,
                 vec1.x * vec2.y - vec1.y * vec2.x);
 }
+
+
+Ray::Ray (const Vec& start_, const Vec& dir_):
+    start (start_),
+    dir (dir_)
+    {}
+
+double Distance (Ray ray, Vec point) {
+    return ((ray.start - point) * !(ray.dir)).GetLen();
+}

@@ -1,7 +1,7 @@
-#include "vec.h"
-
 #ifndef COORDSYS_H
 #define COORDSYS_H
+
+#include "vec.h"
 
 class CoordSys {
     public:
