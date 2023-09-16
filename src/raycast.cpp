@@ -51,7 +51,7 @@ int main () {
 
 
 void RayCastSph (sf::Image& img, const Camera& cam, const Light& light, const Sphere& sph) {
-    
+
     for (int pix_y = 0; pix_y < H; pix_y++) {
         for (int pix_x = 0; pix_x < W; pix_x++) {
             

@@ -11,7 +11,7 @@ class Vec {
 
     explicit Vec (double x_, double y_, double z_);
 
-    void Move (double x_, double y_, double z_);
+    void SetPos (double x_, double y_, double z_);
 
     Vec operator-() const;
 

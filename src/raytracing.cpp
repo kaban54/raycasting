@@ -1,5 +1,6 @@
 #include "raytracing.h"
 
+
 Camera::Camera (const Vec& pos_, const CoordSys& screen_sys_):
     pos (pos_),
     screen_sys (screen_sys_)
@@ -11,10 +12,21 @@ Ray Camera::GetRay (int pix_x, int pix_y) const {
     return Ray (pos, screen_sys.origin + dx * pix_x + dy * pix_y - pos);
 }
 
+void Camera::Move (const Vec& vec) {
+    screen_sys.Move (vec);
+    pos += vec;
+}
+
+
 Light::Light (const Vec& pos_, const Vec& col_):
     pos (pos_),
     col (col_)
     {}
+
+void Light::Move (const Vec& vec) {
+    pos += vec;
+}
+
 
 sf::Color GetsfColor (const Vec& col) {
     Vec cpy = col * 255;

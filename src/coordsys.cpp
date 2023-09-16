@@ -17,13 +17,8 @@ CoordSys::CoordSys (const Vec& origin_, const Vec& scale_):
     scale  (scale_)
     {}
 
-
-void CoordSys::Move (double x, double y, double z) {
-    origin.Move (x, y, z);
-}
-
 void CoordSys::Move (const Vec& vec) {
-    origin = vec;
+    origin += vec;
 }
 
 Vec CoordSys::GetRelCoords (const Vec& vec) const {

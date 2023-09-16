@@ -7,7 +7,7 @@ Vec::Vec (double x_, double y_, double z_):
     z (z_)
     {}
 
-void Vec::Move (double x_, double y_, double z_) {
+void Vec::SetPos (double x_, double y_, double z_) {
     x = x_;
     y = y_;
     z = z_;

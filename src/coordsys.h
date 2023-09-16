@@ -15,8 +15,6 @@ class CoordSys {
 
     explicit CoordSys (const Vec& origin_ = Vec (0, 0, 0), const Vec& scale_ = Vec (1, 1, 1));
 
-    void Move (double x, double y, double z);
-
     void Move (const Vec& vec);
 
     Vec GetRelCoords (const Vec& vec) const;

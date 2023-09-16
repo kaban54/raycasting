@@ -14,6 +14,8 @@ class Camera {
     explicit Camera (const Vec& pos_, const CoordSys& screen_sys_);
 
     Ray GetRay (int pix_x, int pix_y) const;
+
+    void Move (const Vec& new_pos);
 };
 
 class Light {
@@ -22,6 +24,8 @@ class Light {
     Vec col;
 
     explicit Light (const Vec& pos_, const Vec& col_ = Vec (1, 1, 1));
+
+    void Move (const Vec& vec);
 };
 
 
