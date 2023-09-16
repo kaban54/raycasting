@@ -1,4 +1,5 @@
 #include "vec.h"
+#include <stdio.h>
 
 Vec::Vec (double x_, double y_, double z_): 
     x (x_),
@@ -65,7 +66,7 @@ Vec operator/= (Vec& vec, const double scalar) {
 }
 
 double operator, (const Vec& vec1, const Vec& vec2) {
-    return vec1.x * vec2.x + vec2.y * vec2.y + vec1.z * vec2.z;
+    return (vec1.x * vec2.x) + (vec1.y * vec2.y) + (vec1.z * vec2.z);
 }
 
 Vec operator^ (const Vec& vec1, const Vec& vec2) {
@@ -73,7 +74,7 @@ Vec operator^ (const Vec& vec1, const Vec& vec2) {
 }
 
 double Vec::GetLen() const {
-    return std::sqrt (x * x + y * y);
+    return std::sqrt (x * x + y * y + z * z);
 }
 
 void Vec::Normalize () {

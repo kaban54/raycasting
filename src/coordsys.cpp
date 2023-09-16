@@ -27,13 +27,13 @@ void CoordSys::Move (const Vec& vec) {
 }
 
 Vec CoordSys::GetRelCoords (const Vec& vec) const {
-    Vec ret = vec - origin;
-    ret.x /= scale.x;
-    ret.y /= scale.y;
-    ret.z /= scale.z;
-    return ret;
+    return (vec - origin) ^ scale;
 }
 
 Vec CoordSys::GetAbsCoords (const Vec& vec) const {
-    return origin + (scale ^ vec);
+    Vec ret = vec;
+    ret.x /= scale.x;
+    ret.y /= scale.y;
+    ret.z /= scale.z;
+    return origin + ret;
 }

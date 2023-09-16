@@ -8,8 +8,8 @@ class CoordSys {
     Vec origin;
     Vec scale;
 
-    explicit CoordSys (double originX_ = 0, double originY_ = 0, double originZ_ = 0,
-              double  scaleX_ = 1, double  scaleY_ = 1, double  scaleZ_ = 1);
+    explicit CoordSys (double originX_, double originY_, double originZ_,
+              double  scaleX_, double  scaleY_, double  scaleZ_);
     
     explicit CoordSys (double originX_ = 0, double originY_ = 0, double originZ_ = 0, double scale = 1);
 
